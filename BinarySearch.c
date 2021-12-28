@@ -2,6 +2,29 @@
 #include "typedef.h"
 
 /*
+Functions Declaration
+*/
+uint8_t IsSorted(uint32_t *arr , uint8_t arr_size);
+void swap( uint32_t *xp, uint32_t *yp);
+void BubbleSort(uint32_t *arr , uint8_t arr_size);
+sint8_t binarySearch(uint32_t *arr , uint8_t size , uint32_t number);
+
+void main()
+{
+    uint32_t arr[]={1,8,3,2,9};
+
+    printf("Test case searching for 2 in the given array:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",arr[i]);
+    }
+    printf("\n the index of %d after sorted: %d\n",2,binarySearch(arr,5,2));
+
+}
+
+
+
+/*
     IsSorted Function check the array sorted or not
     return 1 if sorted and 0 if not
     Input: array of u32 , size or array
@@ -90,15 +113,3 @@ sint8_t binarySearch(uint32_t *arr , uint8_t size , uint32_t number)
 }
 
 
-void main()
-{
-    uint32_t arr[]={1,8,3,2,9};
-
-    printf("Test case searching for 2 in the given array:");
-    for(int i=0;i<5;i++)
-    {
-        printf("%d",arr[i]);
-    }
-    printf("\n the index after sorted %d\n",binarySearch(arr,5,2));
-
-}
