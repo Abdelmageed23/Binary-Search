@@ -20,6 +20,7 @@ void main()
     }
     printf("\n the index of %d after sorted: %d\n",2,binarySearch(arr,5,2));
 
+
 }
 
 
